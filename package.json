@@ -4,7 +4,8 @@
   "description": "Proyecto del curso de fundamentos de javascript. Creación del primer modulo/paquete con Node Package Manager ()\u001b[Dnpm)\u001b[F",
   "main": "dist/src/platzom.js",
   "scripts": {
-    "build": "babel src/platzom.js -d dist/"
+    "build": "babel src/platzom.js -d dist/",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

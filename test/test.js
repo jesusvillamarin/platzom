@@ -8,7 +8,63 @@
  */
 
 
-const expect = require('mocha').expect
+const expect = require('mocha').expect;
 const platzom = require('..');
 
-describe('')
+// Esta función 'describe' se ejecutaran bajo el entorno que esta corriendo mocha
+
+/* 'describe' recibe dos parametros
+        > Modulo que se le realizara los test
+        > Función que incluye todos los test
+    
+    para correr un test hay que escribir 
+        > it('Mensaje de lo que realizara',function(){...})
+    
+    para validar el resultado que esperamos usamos la funcion expect()
+        expect(resultado).to.equal("Valor esperado")
+
+
+*/
+/**
+ *      Palabras a testear de acuerdo a las funciones
+ * 
+ *      >Programar
+ */
+
+const programar = 'programar';
+const zapato = 'zapato';
+const dinosaurio = 'tiranosaurio rex';
+const polindromo = 'arepera';
+
+
+describe('#platzom', function () {
+
+
+    it('Si la palabra termina en "ar", se le quitan esos dos caracteres', function () {
+        const resultado = platzom(programar);
+        expect(resultado).to.equal("program")
+    });
+
+    it('Si la palabra inicia con Z, se le añade "pe" al final', function () {
+        const resultado = platzom(zapato);
+        expect(resultado).to.equal('zapatope');
+    });
+
+    it('Si la palabra tiene 10 o mas letras, se debe partir a la mitad y unir con un guión', function () {
+        const resultado = platzom(dinosaurio);
+        expect(resultado).to.equal('tiranosa-urio rex');
+    });
+
+    it('Si la palabra original es un palíndromo, ningnuna regla anterior cuenta y se devuelve la misma palabra intercalando máyusculas y minúsculas', function () {
+        const resultado = platzom(polindromo)
+        expect(resultado).to.equal('ArEpErA')
+    });
+
+    it('repetición de un polindromo con pero sin usar una constante',function(){
+        const resultado = platzom('reconocer');
+        expect(resultado).to.equal('ReCoNoCeR');
+    });
+
+
+
+})

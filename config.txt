@@ -69,3 +69,49 @@
             > chai ----- para realizar aserciones (Asegurar que los valores que devuelvan son los que se esperan)
 
 > 8. Para correr los test creamos una carpeta llamada test/ y un archivo llamado test.js
+    >Importamos el modulo de mocha y nuestro modulo creado
+        > const expect = require('mocha').expect;
+        > const platzom = require('..');
+    
+    > hacemos uso de describe 
+
+       #### 'describe' recibe dos parametros ####
+            > Modulo que se le realizara los test ---> #platzom
+            > Función que incluye todos los test  ---> function(){
+                it(...);
+                it(...);
+                .
+                .
+                .
+            }
+
+        >describe('#platzom',function(){
+            it('Mensaje de la prueba que haremos',function(){
+                const resultado = moduloCreado('argumento');
+                expect(resultado).to.equal('lo que se espera');
+            });
+            
+            it('prueba dos para el modulo',function(){
+                const resultado = modulocreado.otrafuncion('argumento');
+                expect(resultado).to.equal('valor que se espera como resultado');
+            });
+            
+            .
+            .
+            .
+        });
+
+> 9. Para correr los test debemos incluir un nuevo script para que sea ejecutado por npm para eso hacemos lo siguiente
+
+        > Abrimos el archivo package.json
+        > Ubicamos "scripts" : {...}
+        > Agregamos lo siguiente "test": "mocha"
+        > Quedando de la siguiente manera
+            "scripts":{
+                "build": "babel src/platzom.js -d dist/",
+                "test":"mocha"
+            }
+        
+        > Ejecutamos el test escribiendo en la linea de comandos lo siguiente
+            ~ npm test
+        
