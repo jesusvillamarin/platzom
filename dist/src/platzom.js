@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-
+exports.default = platzom;
 /**
  * 
  *      Autor:Jesús Villamarín
@@ -25,7 +25,7 @@ Object.defineProperty(exports, "__esModule", {
 
 */
 
-exports.default = platzom = function platzom(str) {
+function platzom(str) {
     // Si la palabra termina en "ar", se le quitan esos dos caracteres
     var trans = str.toLowerCase();
     if (trans.endsWith('ar')) {
@@ -51,23 +51,23 @@ exports.default = platzom = function platzom(str) {
         console.log(trans);
     }
 
-    return;
-};
+    function capitalize(palabra) {
 
-function capitalize(palabra) {
+        var resultado = '';
+        var bandera = true;
+        for (var i = 0; i < palabra.length; i++) {
+            var carac = palabra.charAt(i);
 
-    var resultado = '';
-    var bandera = true;
-    for (i = 0; i < palabra.length; i++) {
-        var carac = palabra.charAt(i);
-
-        resultado += bandera ? carac.toUpperCase() : carac.toLowerCase();
-        bandera = !bandera;
+            resultado += bandera ? carac.toUpperCase() : carac.toLowerCase();
+            bandera = !bandera;
+        }
+        return resultado;
     }
-    return resultado;
-}
 
-var reverse = function reverse(palabra) {
-    palabra = palabra.split('').reverse().join('');
-    return palabra;
+    function reverse(palabra) {
+        palabra = palabra.split('').reverse().join('');
+        return palabra;
+    };
+
+    return trans;
 };

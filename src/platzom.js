@@ -6,8 +6,6 @@
  * 
  */
 
-
-
 /*
 ---># Para exportar nuestro modulo hay que agregar la palabra export
         > export function platzom(){...}
@@ -21,9 +19,7 @@
 
 */
 
-
-
-export default  platzom = function (str) {
+export default function platzom(str) {
     // Si la palabra termina en "ar", se le quitan esos dos caracteres
     let trans = str.toLowerCase();
     if (trans.endsWith('ar')) {
@@ -49,24 +45,24 @@ export default  platzom = function (str) {
         console.log(trans);
     }
 
-    return;
-};
+    function capitalize(palabra) {
 
-function capitalize(palabra) {
+        let resultado = '';
+        let bandera = true;
+        for (let i = 0; i < palabra.length; i++) {
+            let carac = palabra.charAt(i);
 
-    let resultado = '';
-    let bandera = true;
-    for (i = 0; i < palabra.length; i++) {
-        let carac = palabra.charAt(i);
-
-        resultado += bandera ? carac.toUpperCase() : carac.toLowerCase();
-        bandera = !bandera;
+            resultado += bandera ? carac.toUpperCase() : carac.toLowerCase();
+            bandera = !bandera;
+        }
+        return resultado;
     }
-    return resultado;
-}
 
 
-let reverse = (palabra) => {
-    palabra = palabra.split('').reverse().join('');
-    return palabra;
+    function reverse (palabra) {
+        palabra = palabra.split('').reverse().join('');
+        return palabra;
+    };
+    
+    return trans;
 };
