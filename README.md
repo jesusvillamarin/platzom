@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PLATZOM
 
 #> ¿?
@@ -29,3 +30,7 @@ platzom.pro
 
 # Licencia
 [MIT](https://opensource.org/licenses/MIT)
+=======
+# platzom
+Proyecto de platzi - curso de fundamentos de Javascript. Modulo que traduce palabras a un idioma inventado
+>>>>>>> origin/master
