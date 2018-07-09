@@ -1,5 +1,5 @@
 {
-  "name": "@jesusvillamarin/platzom",
+  "name": "@j.villamarin/platzom",
   "version": "0.1.0",
   "description": "Proyecto del curso de fundamentos de javascript. Creación del primer modulo/paquete con Node Package Manager ()\u001b[Dnpm)\u001b[F",
   "main": "dist/src/platzom.js",
