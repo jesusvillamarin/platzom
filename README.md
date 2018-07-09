@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # PLATZOM
 
-#> ¿?
+#  ¿?
 
 --> Platzom es un modulo que traduce palabras a un idioma inventado
 --> Proyecto del [Curso de fundamentos de javascript de *Platzi*](https://platzi.com/js)
@@ -13,12 +12,12 @@
 -Si la palabra original es un palíndromo, ningnuna regla anterior cuenta y se devuelve la misma palabra intercalando máyusculas y minúsculas
 
 
-#Instruciones
+# Instruciones
 ```
 npm install platzom
 ```
 
-#Importar
+# Importar
 ```
 import platzom from 'platzom'
 
@@ -30,7 +29,6 @@ platzom.pro
 
 # Licencia
 [MIT](https://opensource.org/licenses/MIT)
-=======
+
 # platzom
 Proyecto de platzi - curso de fundamentos de Javascript. Modulo que traduce palabras a un idioma inventado
->>>>>>> origin/master

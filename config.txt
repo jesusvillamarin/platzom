@@ -49,7 +49,7 @@
             }
         
         > Type and execute  in the command line the following
-            npm install babel-preset-env --save-dev
+            ~ npm install babel-preset-env --save-dev
 
 > 5. El código transpilado que funcionara en todos los entornos estara en:
     > dist/src/platzom.js
