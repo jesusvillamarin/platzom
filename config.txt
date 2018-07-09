@@ -1,0 +1,71 @@
+#### PROYECTO DEL CURSO DE FUNDAMENTOS DE JAVASCRIPT *PLATZI* ####
+
+> Primer proyecto donde creamos un modulo/paquete con npm
+
+        npm set init.author.name "Jesús Auriol Villamarín Ortiz"
+        npm set init.author.email "j.villamarin@outlook.com"
+        npm set init.author.url "https://github.com/jesusvillamarin/"
+
+> El archio package.json es un archivo manifiesto donde se reune toda la información importante de todo el modulo/paquete
+
+
+#### Configuración de Babeljs ####
+
+> 1. Choose your tool
+
+        >Babel built-ins
+            > CLI
+> 2. Installation    (--save-dev) -> to install in your development environment
+
+    > npm install babel-cli --save-dev
+
+
+> 3. Usage --> to run babel directly from the command line we're going to put the following
+
+    > Open package.json
+    > Search "scripts":{ }
+    > Add "build" : "babel src -d lib"
+        > src -- indica la ruta del modulo que vamos a Transpilar
+        > -d -- indica el directorio donde se pondra el resultado
+
+        "version": "0.0.0.x",
+        "script":{
+            "build" :  "build src/platzom.js -d dist"
+        },
+
+    > to run, need use ----> npm run build
+
+> 4. Create the configuration file (.babelrc)
+
+    --- Se utilizan en la configuración para que las librerias, en este caso babel, sepa como ejecutarse
+    --- Debemos usar un preset
+    --- Los preset de babel nos sirve para decirle que funcionalidades queremos que transpile
+        > Transpilar código de Ecmascript (ES) 2015 a un código ejecutable por javascript
+
+    > Create de .babelrc file
+        > Add the following
+            {
+                "presets": ["env"]
+            }
+        
+        > Type and execute  in the command line the following
+            npm install babel-preset-env --save-dev
+
+> 5. El código transpilado que funcionara en todos los entornos estara en:
+    > dist/src/platzom.js
+
+> 6. Lo próximo hacer es cambiar el archivo maín del package.json para que se pueda importar el código transpilado
+    "main": "dist/src/platzom.js", <----
+    "scripts": {
+        "build": "babel src/platzom.js -d dist/"
+    },
+        
+
+    
+> 7. Crear test para poner a prueba nuestro código, es una buena práctica crear los test antes de crear los modulos/paquetes
+    > Utilizaremos dos librerias
+        > npm install mocha chai --save-dev
+            > mocha -- para realizar los test
+            > chai ----- para realizar aserciones (Asegurar que los valores que devuelvan son los que se esperan)
+
+> 8. Para correr los test creamos una carpeta llamada test/ y un archivo llamado test.js

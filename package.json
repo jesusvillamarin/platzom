@@ -1,0 +1,31 @@
+{
+  "name": "platzom",
+  "version": "0.0.1",
+  "description": "Proyecto del curso de fundamentos de javascript. Creación del primer modulo/paquete con Node Package Manager ()\u001b[Dnpm)\u001b[F",
+  "main": "dist/src/platzom.js",
+  "scripts": {
+    "build": "babel src/platzom.js -d dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusvillamarin/platzom.git"
+  },
+  "keywords": [
+    "curso",
+    "javascript",
+    "pro",
+    "jesus",
+    "villamarin",
+    "palabras"
+  ],
+  "author": "Jesús Villamarín",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jesusvillamarin/platzom/issues"
+  },
+  "homepage": "https://github.com/jesusvillamarin/platzom#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
