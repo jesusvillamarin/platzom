@@ -115,3 +115,20 @@
         > Ejecutamos el test escribiendo en la linea de comandos lo siguiente
             ~ npm test
         
+> 10. Creamos el archivo .gitignore 
+        > agregamos:
+            > node_modules
+            > .DS_Store
+
+> 11. Hacemos push a nuestro repositorio en github
+        >git push origin master
+
+> 12. Publicamos nuestro modulo/paquete en npm
+        > Cambiamos el nombre en package.json 
+            de "name": platzom ---------- a ----------"name": @j.villamarin/platzom
+            lo hacemos para evitar conflictos de existencia al subirlo a npm
+        
+        > Escribimos en la linea de comandos lo siguiente
+            npm publish --access=public
+
+> 13. ########## FIN 
